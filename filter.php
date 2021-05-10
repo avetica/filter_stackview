@@ -1,0 +1,83 @@
+<?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ *
+ *
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ * @package   filter_stackview
+ * @copyright 10/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
+ * @author    Luuk Verhoeven
+ **/
+defined('MOODLE_INTERNAL') || die;
+
+/**
+ * Class filter_stackview
+ *
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ * @package   filter_stackview
+ * @copyright 10/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
+ * @author    Luuk Verhoeven
+ */
+class filter_stackview extends moodle_text_filter {
+
+    /**
+     * Apply the filter to the text
+     *
+     * @param string $text    to be processed by the text
+     * @param array  $options filter options
+     *
+     * @return string text after processing
+     * @see filter_manager::apply_filter_chain()
+     */
+    public function filter($text, array $options = []) : string {
+        if (!isset($options['originalformat'])) {
+            // if the format is not specified, we are probably called by {@see format_string()}
+            // in that case, it would be dangerous to replace URL with the link because it could
+            // be stripped. therefore, we do nothing
+            return $text;
+        }
+        // Regex.
+        preg_match_all('#\[\[(stackview)+\ (\d+)\]\]#s', $text, $matches, PREG_SET_ORDER);
+
+        // Check regex.
+        foreach ($matches as $match) {
+            $text = $this->stackview($match, $text);
+        }
+
+        return $text;
+    }
+
+    /**
+     * Replace with stackview
+     *
+     * @param $match
+     * @param $text
+     *
+     * @return string
+     */
+    private function stackview($match, $text) : string {
+
+        // @TODO maybe check if stackviewer exists.
+        $replace = sprintf(" <iframe src=\"/mod/stackview/view.php?g=%d&action=embedded\" width=\"600\" height=\"600\" frameborder=\"0\"
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>", $match[2]);
+
+        return str_replace('[[stackview ' . $match[2] . ']]', $replace, $text);
+    }
+
+}
