@@ -1,11 +1,11 @@
 # MFreak - filter_stackview
 
-This filter converts stackview shortcode to an iframe.
+This filter converts stackview `[[stackview 3]]` shortcode to an iframe.
 
 ##### Features:
 
 - GDPR null_provider
-- Converting shortcodes
+- Converting shortcodes `[[stackview 3]]`
 
 ##### Tested in:
 
