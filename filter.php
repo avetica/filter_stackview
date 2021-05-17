@@ -74,8 +74,8 @@ class filter_stackview extends moodle_text_filter {
     private function stackview($match, $text) : string {
 
         // @TODO maybe check if stackviewer exists.
-        $replace = sprintf(" <iframe src=\"/mod/stackview/view.php?g=%d&action=embedded\" width=\"600\" height=\"600\" frameborder=\"0\"
-                        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>", $match[2]);
+        $replace = sprintf('<iframe src="/mod/stackview/view.php?g=%d&action=embedded" width="600" height="430" frameborder="0"
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen class="stackviewer-embed"></iframe>', $match[2]);
 
         return str_replace('[[stackview ' . $match[2] . ']]', $replace, $text);
     }
