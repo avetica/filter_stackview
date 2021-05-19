@@ -15,19 +15,40 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Plugin version and other meta-data are defined here.
+ *
  *
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
  * @package   filter_stackview
- * @copyright 10/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
+ * @copyright 19/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
  * @author    Luuk Verhoeven
  **/
+defined('MOODLE_INTERNAL') || die;
 
-defined('MOODLE_INTERNAL') || die();
+/**
+ * Class filter_stackview_renderer
+ *
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ * @package   filter_stackview
+ * @copyright 19/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
+ * @author    Luuk Verhoeven
+ */
+class filter_stackview_renderer extends plugin_renderer_base {
 
-$plugin->version = 2021051900;
-$plugin->requires = 2018052700;
-$plugin->component = 'filter_stackview';
-$plugin->maturity = MATURITY_STABLE;
-$plugin->release = '3.9.0';
+    /**
+     * render_stack
+     *
+     * @param int $id
+     *
+     * @return bool|string
+     * @throws \moodle_exception
+     */
+    public function render_stack(int $id) {
+        $context = (new \filter_stackview\output\output_stackviewer($id))
+            ->export_for_template($this);
+
+        return $this->render_from_template('filter_stackview/stackviewer', $context);
+    }
+
+}
