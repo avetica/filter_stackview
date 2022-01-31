@@ -24,13 +24,17 @@
         class="stackviewer-embed"></iframe>
 <script>
         {{#js}}
-        iFrameResize({
-            log: false,
-            autoResize: true,
-            checkOrigin: false,
-            sizeHeight: true,
-            sizeWidth: false,
-            heightCalculationMethod: 'taggedElement'
-        });
+        try {
+            iFrameResize({
+                log: false,
+                autoResize: true,
+                checkOrigin: false,
+                sizeHeight: true,
+                sizeWidth: false,
+                heightCalculationMethod: 'taggedElement'
+            });
+        } catch (e) {
+            console.log('Loaded embed but not visible?', e)
+        }
         {{/js}}
 </script>

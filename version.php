@@ -26,7 +26,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2021051900;
+$plugin->version = 2022013100;
 $plugin->requires = 2018052700;
 $plugin->component = 'filter_stackview';
 $plugin->maturity = MATURITY_STABLE;
