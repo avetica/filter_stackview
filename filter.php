@@ -36,9 +36,9 @@ class filter_stackview extends moodle_text_filter {
      */
     public function filter($text, array $options = []): string {
         if (!isset($options['originalformat'])) {
-            // if the format is not specified, we are probably called by {@see format_string()}
+            // If the format is not specified, we are probably called by {@see format_string()}
             // in that case, it would be dangerous to replace URL with the link because it could
-            // be stripped. therefore, we do nothing
+            // be stripped. therefore, we do nothing.
             return $text;
         }
 
@@ -59,7 +59,7 @@ class filter_stackview extends moodle_text_filter {
     }
 
     /**
-     * Replace with stackview
+     * Replace with stackview.
      *
      * @param $match
      * @param $text
