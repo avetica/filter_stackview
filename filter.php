@@ -15,18 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- *
- *
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- *
- * @package   filter_stackview
- * @copyright 10/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
- * @author    Luuk Verhoeven
- **/
-defined('MOODLE_INTERNAL') || die;
-
-/**
- * Class filter_stackview
+ * Class filter stackview.
  *
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
@@ -37,7 +26,7 @@ defined('MOODLE_INTERNAL') || die;
 class filter_stackview extends moodle_text_filter {
 
     /**
-     * Apply the filter to the text
+     * Apply the filter to the text.
      *
      * @param string $text   to be processed by the text
      * @param array $options filter options
@@ -53,7 +42,7 @@ class filter_stackview extends moodle_text_filter {
             return $text;
         }
 
-        if (!is_string($text) or empty($text)) {
+        if (!is_string($text) || empty($text)) {
             // Non string data can not be filtered anyway.
             return $text;
         }

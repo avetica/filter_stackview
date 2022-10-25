@@ -25,7 +25,6 @@
  **/
 
 namespace filter_stackview\output;
-defined('MOODLE_INTERNAL') || die;
 
 use renderable;
 use renderer_base;

@@ -26,8 +26,6 @@
 
 namespace filter_stackview\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy Subsystem for filter_stackview implementing null_provider.
  *
