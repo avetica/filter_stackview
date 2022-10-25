@@ -19,9 +19,17 @@
     @copyright 19/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
     @author    Luuk Verhoeven
     @template filter/stackview
+
+    Example : {
+        width: 100%,
+        height: 100%,
+        src: 'http://'
+    }
 }}
 <script src="/filter/stackview/javascript/iframe.sizer.min.js"></script>
+{{#url}}
 <iframe src="{{{url}}}" width="{{width}}" height="{{height}}" style="border: none;" class="stackviewer-embed"></iframe>
+{{/url}}
 <script>
         {{#js}}
         try {
