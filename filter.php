@@ -61,12 +61,12 @@ class filter_stackview extends moodle_text_filter {
     /**
      * Replace with stackview.
      *
-     * @param $match
-     * @param $text
+     * @param array $match
+     * @param string $text
      *
-     * @return string
+     * @return array|string|string[]
      */
-    private function stackview($match, $text): string {
+    private function stackview(array $match, string $text) {
         global $PAGE;
         $renderer = $PAGE->get_renderer('filter_stackview');
 
