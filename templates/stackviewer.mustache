@@ -18,10 +18,10 @@
     @package filter_stackview
     @copyright 19/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
     @author    Luuk Verhoeven
+    @template filter/stackview
 }}
 <script src="/filter/stackview/js/iframe.sizer.min.js"></script>
-<iframe src="{{{url}}}" width="{{width}}" height="{{height}}" frameborder="0"
-        class="stackviewer-embed"></iframe>
+<iframe src="{{{url}}}" width="{{width}}" height="{{height}}" style="border: none;" class="stackviewer-embed"></iframe>
 <script>
         {{#js}}
         try {
