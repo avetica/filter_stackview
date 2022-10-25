@@ -36,7 +36,7 @@ use templatable;
  *
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  *
- * @package   mod_stackview
+ * @package   filter_stackview
  * @copyright 09/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
  * @author    Luuk Verhoeven
  */
