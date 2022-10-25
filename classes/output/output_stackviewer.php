@@ -48,14 +48,14 @@ class output_stackviewer implements renderable, templatable {
     private $id;
 
     /**
-     * output_stackviewer constructor.
+     * Output stackviewer constructor.
      */
     public function __construct(int $id) {
         $this->id = $id;
     }
 
     /**
-     * Export template vars
+     * Export template vars.
      *
      * @param \renderer_base $output
      *
