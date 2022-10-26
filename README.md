@@ -44,7 +44,7 @@ If you discover any security vulnerabilities, please send an e-mail to Avetica v
 ### License
 
 This project is licensed under the **GNU General Public License v3.0**. - http://www.gnu.org/licenses or see
-the [LICENSE](LICENSE) file.
+the [LICENSE](LICENSE.md) file.
 
 ---
 ### Copyright
