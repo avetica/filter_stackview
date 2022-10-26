@@ -9,7 +9,9 @@ This filter converts stackview `[[stackview 3]]` shortcode to an iframe.
 
 ##### Tested in:
 
-![moodle394](https://img.shields.io/badge/moodle-3.94-blue.svg)
+![moodle394](https://img.shields.io/badge/moodle-3.94-green.svg)
+![workplace311](https://img.shields.io/badge/workplace-3.11-blue.svg)
+
 
 ### Dependencies
 
@@ -26,9 +28,9 @@ This filter converts stackview `[[stackview 3]]` shortcode to an iframe.
 ##### Requirements:
 
 * Recommended Moodle version: **3.9 Moodle**
-* Recommended PHP version: **7.2**
+* Recommended PHP version: **7.4**
 * Required Moodle version: **3.9 Moodle**
-* Required PHP version: **7.2**
+* Required PHP version: **7.4**
 
 ---
 ### Changelog
