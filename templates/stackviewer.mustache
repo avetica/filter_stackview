@@ -33,6 +33,8 @@
 {{#url}}
 <iframe src="{{{url}}}" width="{{width}}" height="{{height}}" style="border: none;" class="stackviewer-embed"></iframe>
 {{/url}}
+
+<!-- eslint-disable -->
 <script>
         {{#js}}
         try {
@@ -43,9 +45,9 @@
                 sizeHeight: true,
                 sizeWidth: false,
                 heightCalculationMethod: 'taggedElement'
-            }); // eslint-disable-line no-use-before-define
+            });
         } catch (e) {
-            // eslint-disable-line no-console
+
             console.log('Loaded embed but not visible?', e);
         }
         {{/js}}
