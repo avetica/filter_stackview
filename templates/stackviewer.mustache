@@ -19,15 +19,7 @@
     @copyright 19/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
     @author    Luuk Verhoeven
     @template filter/stackview
-
-    Iframe stackview.
-
-    Example context:
-    {
-        "width": 100%,
-        "height": 100%,
-        "src": 'http://'
-    }
+    Example:{}
 }}
 <script src="/filter/stackview/javascript/iframe.sizer.min.js"></script>
 {{#url}}
@@ -44,6 +36,8 @@
                 sizeWidth: false,
                 heightCalculationMethod: 'taggedElement'
             }); // eslint-disable-line no-use-before-define
-        } catch (e) {}
+        } catch (e) {
+            console.log('Loaded embed but not visible?', e);// eslint-disable-line no-console
+        }
         {{/js}}
 </script>
