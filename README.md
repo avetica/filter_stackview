@@ -11,6 +11,10 @@ This filter converts stackview `[[stackview 3]]` shortcode to an iframe.
 
 ![moodle394](https://img.shields.io/badge/moodle-3.94-blue.svg)
 
+### Dependencies
+
+- mod_stackviewer -> https://github.com/avetica/moodle-mod_stackview
+
 ### Installation
 
 1. Copy this plugin to the `filter\stackview` folder on the server
