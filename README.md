@@ -1,4 +1,4 @@
-# MFreak - filter_stackview
+# Moodle - filter_stackview
 
 This filter converts stackview `[[stackview 3]]` shortcode to an iframe.
 
