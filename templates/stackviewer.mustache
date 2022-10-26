@@ -20,10 +20,13 @@
     @author    Luuk Verhoeven
     @template filter/stackview
 
-    Example : {
-        width: 100%,
-        height: 100%,
-        src: 'http://'
+    Iframe stackview.
+
+    Example context:
+    {
+        "width": 100%,
+        "height": 100%,
+        "src": 'http://'
     }
 }}
 <script src="/filter/stackview/javascript/iframe.sizer.min.js"></script>
@@ -33,17 +36,14 @@
 <script>
         {{#js}}
         try {
-            // eslint-disable-line
-            iFrameResize({
+            window.iFrameResize({
                 log: false,
                 autoResize: true,
                 checkOrigin: false,
                 sizeHeight: true,
                 sizeWidth: false,
                 heightCalculationMethod: 'taggedElement'
-            });
-        } catch (e) {
-            console.log('Loaded embed but not visible?', e)
-        }
+            }); // eslint-disable-line no-use-before-define
+        } catch (e) {}
         {{/js}}
 </script>
