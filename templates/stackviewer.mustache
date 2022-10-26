@@ -18,8 +18,17 @@
     @package filter_stackview
     @copyright 19/05/2021 Mfreak.nl | LdesignMedia.nl - Luuk Verhoeven
     @author    Luuk Verhoeven
+}}
+{{!
     @template filter/stackview
-    Example:{}
+
+    Example context (json):
+    {
+        "url" : "http://",
+        "width" : 1024,
+        "height" : 850
+        ]
+    }
 }}
 <script src="/filter/stackview/javascript/iframe.sizer.min.js"></script>
 {{#url}}
@@ -37,7 +46,7 @@
                 heightCalculationMethod: 'taggedElement'
             }); // eslint-disable-line no-use-before-define
         } catch (e) {
-            console.log('Loaded embed but not visible?', e);// eslint-disable-line no-console
+            console.log('Loaded embed but not visible?', e); // eslint-disable-line no-console
         }
         {{/js}}
 </script>
