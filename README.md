@@ -34,7 +34,7 @@ This filter converts stackview `[[stackview 3]]` shortcode to an iframe.
 
 ---
 ### Security Vulnerabilities
-If you discover any security vulnerabilities, please send an e-mail to Avetica via l.verhoeven@avetica.nl.
+If you discover any security vulnerabilities, please send an e-mail to Avetica via security@avetica.nl.
 
 ---
 ### License
@@ -50,6 +50,6 @@ the [LICENSE](LICENSE) file.
 Copyright © 2021 Avetica :: [avetica.nl](https://avetica.nl/)
 
 ##### Author:
-* Luuk Verhoeven :: [MFreak](https://mfreak.nl/) (l.verhoeven@avetica.nl)
+* Luuk Verhoeven :: [Ldesign Media](https://ldesignmedia.nl/) - [luuk@ldesignmedia.nl](luuk@ldesignmedia.nl)
 
-![MFreak.nl](https://MFreak.nl/logo_small.png)
+<img src="https://ldesignmedia.nl/themes/ldesignmedia/assets/images/logo/logo.svg" alt="ldesignmedia" height="70px">
