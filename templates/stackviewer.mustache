@@ -24,7 +24,7 @@
 
     Example context (json):
     {
-        "url" : "http://",
+        "url" : "https://example.com/stackview",
         "width" : 1024,
         "height" : 850
     }
@@ -45,7 +45,8 @@
                 heightCalculationMethod: 'taggedElement'
             }); // eslint-disable-line no-use-before-define
         } catch (e) {
-            console.log('Loaded embed but not visible?', e); // eslint-disable-line no-console
+            // eslint-disable-line no-console
+            console.log('Loaded embed but not visible?', e);
         }
         {{/js}}
 </script>
