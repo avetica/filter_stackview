@@ -11,8 +11,9 @@ This filter converts stackview `[[stackview 3]]` shortcode to an iframe.
 
 ![moodle43](https://img.shields.io/badge/moodle-4.3-green.svg)
 ![moodle394](https://img.shields.io/badge/moodle-3.94-green.svg)
+![moodle403](https://img.shields.io/badge/moodle-4.3-green.svg)
 ![workplace311](https://img.shields.io/badge/workplace-3.11-blue.svg)
-
+![workplace403](https://img.shields.io/badge/workplace-4.3-blue.svg)
 
 ### Dependencies
 
@@ -35,6 +36,9 @@ This filter converts stackview `[[stackview 3]]` shortcode to an iframe.
 
 ---
 ### Changelog
+
+##### 4.3 (Apr 15, 2024)
+* Update/tested in Moodle 4.3
 
 ##### 3.9 (09.05.2021)
 * Original release 
